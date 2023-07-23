@@ -15,6 +15,7 @@ models = {
     'Anything-V3.0-pru': 'https://huggingface.co/ckpt/anything-v3.0/resolve/main/Anything-V3.0-pruned.safetensors',
     'Counterfeit-V3.0': 'https://huggingface.co/ckpt/Counterfeit-V3.0/resolve/main/Counterfeit-V3.0_fp32.safetensors',
     'AOM2-Hard': 'https://huggingface.co/WarriorMama777/OrangeMixs/resolve/main/Models/AbyssOrangeMix2/AbyssOrangeMix2_hard.safetensors',
+    'Futa' : 'https://civitai-delivery-worker-prod-2023-06-01.5ac0637cfd0766c97916cefa3764fbdf.r2.cloudflarestorage.com/202849/model/truefutaV15.WRdi.safetensors?X-Amz-Expires=86400&response-content-disposition=attachment%3B%20filename%3D%22trueFutaPenisPussyNo_v15BakedVAE.safetensors%22&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=2fea663d76bd24a496545da373d610fc/20230723/us-east-1/s3/aws4_request&X-Amz-Date=20230723T151608Z&X-Amz-SignedHeaders=host&X-Amz-Signature=5e6a51dd7f2db6322f25679826c0f541d67f4d430a372759fc4fdd93f39aab48',
 }
 # Menampilkan daftar model yang tersedia
 print("Model yang tersedia (Untuk sementara hanya sedikit, model bisa di download dengan extension civitai):")
@@ -48,3 +49,8 @@ for model_name in selected_models:
     os.rename(file_name, destination_file_path)
 
     print(f"File '{file_name}' berhasil dipindahkan ke folder '{destination_folder}' untuk model '{model_name}'.")                     
+
+#rename model baru
+old_name = r"/content/stablebreaktest/models/Stable-diffusion/aws4_request&X-Amz-Date=20230723T151608Z&X-Amz-SignedHeaders=host&X-Amz-Signature=5e6a51dd7f2db6322f25679826c0f541d67f4d430a372759fc4fdd93f39aab48"
+new_name = r"/content/stablebreaktest/models/Stable-diffusion/futa.safetensors"
+os.rename(old_name, new_name) 
